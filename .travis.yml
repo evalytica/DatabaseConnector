@@ -2,6 +2,12 @@ language: R
 cache: packages
 sudo: false
 
+matrix:
+  include:
+    - os: linux
+    - os: osx
+      before_install:
+        - sudo R CMD javareconf
 os:
   - linux
   - osx
